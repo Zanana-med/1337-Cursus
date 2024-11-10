@@ -6,17 +6,14 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 03:30:14 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/09 05:50:46 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/09 06:45:25 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	int	ret;
-
-	ret = 1;
 	if ((c > 64 && c < 91) || (c > 96 && c < 123))
-		return (ret);
+		return (c);
 	else
 		return (0);
 }

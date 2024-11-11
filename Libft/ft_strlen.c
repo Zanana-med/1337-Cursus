@@ -6,11 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 08:01:24 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/10 06:31:27 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/11 02:55:16 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	ret;
 

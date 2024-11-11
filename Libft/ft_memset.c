@@ -6,11 +6,9 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 08:05:27 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/11 01:52:51 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/11 01:58:32 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

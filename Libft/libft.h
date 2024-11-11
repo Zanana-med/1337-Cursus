@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:40:13 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/11 04:25:43 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/11 07:21:37 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 #include <stddef.h> // for the size_t type
+#include <stdio.h>  // for th main and test (printf ...)
 #include <string.h> // for the mem's original tests
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

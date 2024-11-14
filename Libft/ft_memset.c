@@ -6,9 +6,10 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 08:05:27 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/13 18:51:02 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/14 06:20:16 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

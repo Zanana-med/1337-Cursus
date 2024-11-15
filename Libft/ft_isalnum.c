@@ -6,11 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 06:39:06 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/09 06:49:47 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/14 07:12:21 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c > 47 && c < 58) || ((c > 64 && c < 91) || (c > 96 && c < 123)))
 		return (c);

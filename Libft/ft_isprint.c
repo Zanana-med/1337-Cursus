@@ -6,11 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 06:57:54 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/09 06:59:28 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/15 11:54:50 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (c);

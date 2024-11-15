@@ -6,10 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 06:34:22 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/09 06:49:22 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/15 11:55:03 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (c);

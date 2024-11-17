@@ -6,18 +6,18 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 06:28:30 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 09:23:29 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/17 18:17:17 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static	size_t is_found(const char *str, char c)
+static size_t	is_found(const char *str, char c)
 {
 	size_t	x;
 
 	x = 0;
-	while(str[x])
-		if(str[x++] == c)
+	while (str[x])
+		if (str[x++] == c)
 			return (1);
 	return (0);
 }
@@ -26,10 +26,10 @@ static size_t	ft_checker(const char *str, char const *trim)
 {
 	size_t	i;
 
-	if(!str || !*str)
+	if (!str || !*str)
 		return (1);
 	i = 0;
-	while(str[i] && is_found(trim, str[i]))
+	while (str[i] && is_found(trim, str[i]))
 		i++;
 	if (i == ft_strlen(str))
 		return (1);
@@ -59,7 +59,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!ret)
 		return (NULL);
 	index = 0;
-	while(start <= end)
+	while (start <= end)
 		ret[index++] = s1[start++];
 	ret[index] = '\0';
 	return (ret);

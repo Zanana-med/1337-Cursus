@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 05:51:51 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 06:32:51 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/17 18:17:42 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!ret)
 		return (NULL);
 	index = 0;
-	while(s1 && s1[index] && index < ft_strlen(s1))
+	while (s1 && s1[index] && index < ft_strlen(s1))
 	{
 		ret[index] = s1[index];
 		index++;

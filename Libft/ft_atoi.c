@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:00:00 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 00:03:38 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/17 09:35:17 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -42,9 +42,4 @@ int	ft_atoi(const char *str)
 		index++;
 	}
 	return (res * sign);
-}
-int main()
-{
-	int x = atoi("-15117451828646838017");
-	printf("%d\n", x);
 }

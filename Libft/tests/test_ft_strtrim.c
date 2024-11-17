@@ -6,7 +6,7 @@
 /*   By: aljbari <aljbari@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 05:57:09 by aljbari           #+#    #+#             */
-/*   Updated: 2024/11/06 06:19:27 by aljbari          ###   ########.fr       */
+/*   Updated: 2024/11/17 09:15:16 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ TestCase tests[] = {
     {0x0F, "Trim from middle (should not)", "Hel*lo", "*", "Hel*lo"},
     {0x10, "Trim all matching characters", "====", "=", ""},
     {0x11, "No characters in set", "Hello World!", "XYZ", "Hello World!"},
-    {0x12, "Single character input", "A", "A", ""},
+   {0x12, "Single character input", "A", "A", ""},
     {0x13, "Single character set", "Hello", "H", "ello"},
     {0x14, "Set larger than input", "Hi", "Hia", ""},
     {0x15, "Long set with spaces", "  Hello World!  ", " !", "Hello World"},

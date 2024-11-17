@@ -6,7 +6,7 @@
 /*   By: aljbari <aljbari@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 04:27:46 by aljbari           #+#    #+#             */
-/*   Updated: 2024/11/15 09:19:53 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/16 16:19:58 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ typedef struct {
 
 TestCase strlcat_tests[] = {
     {0, "simple string concatenation", "Hello", " World", 12},
-   /* {1, "partial string concatenation", "Hello", " World", 8},
+    {1, "partial string concatenation", "Hello", " World", 8},
     {2, "full string concatenation", "Hello", " World", 15},
     {3, "empty source string", "Hello", "", 8},
     {4, "empty destination string", "", "Hello", 8},
@@ -77,7 +77,7 @@ TestCase strlcat_tests[] = {
     {30, "source with initial NULL", "Hello", "\0World", 12},
     {31, "destination filled to size limit", "1234567890", " World", 10},
     {32, "destination full but not null-terminated", "1234567890", " World", 20},
-    {33, "source starts with null character", "Hello", "\0 World", 12}*/
+    {33, "source starts with null character", "Hello", "\0 World", 12}
 };
 
 int run_strlcat_tests(int debug)

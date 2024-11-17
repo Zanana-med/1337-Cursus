@@ -6,24 +6,39 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 07:15:06 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/15 11:49:14 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/15 20:55:22 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+//#include <bsd/bsd.h>
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dlen;
-	size_t	dlen_original;
-	size_t	index;
 	size_t	slen;
-
+	size_t	index;
+	
+	if (size == 0)
+		return (ft_strlen(src));
 	dlen = ft_strlen(dst);
-	dlen_original = dlen;
 	slen = ft_strlen(src);
+	if (size <= dlen)
+		return (size + slen);
 	index = 0;
-	while (dlen < (size - 1) && src[index])
-		dst[dlen++] = src[index++];
-	dst[dlen] = '\0';
-	return (dlen_original + slen);
+	while(src[index] && (index + dlen) < (size - 1))
+	{
+		dst[dlen + index] = src[index];
+		index++;
+	}
+	dst[dlen + index] = '\0';
+	return (dlen + slen);
 }
+/*
+int	main()
+{
+	char	dest[20] = "123456789012";
+	char	*src = "1";
+
+	printf("Original : %zu | |%s\n", strlcat(NULL,src , 12), dest);
+
+	//printf("Mine     : %zu | |%s\n", ft_strlcat(dest, src, 12), dest);
+}*/

@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:28:38 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 22:13:11 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/17 23:17:34 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -44,6 +44,18 @@ char	**ft_split(char const *s, char c)
 	return (ret);
 }
 
+int main()
+{
+	char	**tab;
+
+	tab = ft_split("", 'z');
+	
+	if (!(tab))
+		printf("NULL");
+	else
+		if (!tab[0])
+			printf("ok\n");
+}
 static size_t   w_cnt(char const *str, char ch)
 {
         size_t  cnt;

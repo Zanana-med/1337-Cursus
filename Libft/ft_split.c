@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:28:38 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 23:37:06 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/17 23:53:25 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 static size_t   w_cnt(char const *str, char ch);
 static size_t   ft_lenght(const char *str, char ch, size_t start);
 static char     *ft_fill(char *dst, char const *src, size_t len, size_t *from);
-
+static void     free_arr(char **tokens, int filled_size);
 
 char	**ft_split(char const *s, char c)
 {
@@ -42,6 +42,18 @@ char	**ft_split(char const *s, char c)
 	}
 	ret[k] = 0;
 	return (ret);
+}
+static void	free_arr(char **tokens, int filled_size)
+{
+	int	i;
+
+	i = 0;
+	while (i < filled_size)
+	{
+		if (tokens[i])
+			free(tokens[i++]);
+	}
+	free(tokens);
 }
 /*
 int main()
@@ -104,7 +116,10 @@ static char     *ft_fill(char *dst, char const *src, size_t len, size_t *from)
 
         dst = malloc(sizeof(char) * (len + 1));
         if (!dst)
+	{
+		free_arr(&dst, *from);
                 return (NULL);
+	}
         index = 0;
         while(index < len)
         {

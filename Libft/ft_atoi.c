@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:00:00 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 17:29:43 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 17:33:54 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,18 +15,18 @@
 static void	space_check(const char *s, int *index)
 {
 	while ((s[*index]) && (((s[*index] >= 9) && (s[*index] <= 13
-				|| s[*index] == 32))))
+					|| s[*index] == 32))))
 		*index += 1;
 }
 
 static void	sign_check(const char c, int *index, int *sign)
 {
 	if (c == '+' || c == '-')
-        {
-                if (c == '-')
-                        *sign = -1;
-                *index += 1;
-        }
+	{
+		if (c == '-')
+			*sign = -1;
+		*index += 1;
+	}
 }
 
 int	ft_atoi(const char *str)

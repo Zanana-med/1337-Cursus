@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:00:00 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 16:46:49 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 17:29:43 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -36,10 +36,10 @@ int	ft_atoi(const char *str)
 	int		index;
 
 	index = 0;
-	sign = 1;
-	res = 0;
 	space_check(str, &index);
+	sign = 1;
 	sign_check(str[index], &index, &sign);
+	res = 0;
 	while (str[index] && (str[index] >= 48 && str[index] <= 57))
 	{
 		if (res > LLONG_MAX)
@@ -53,8 +53,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-int main()
-{
-	printf("-254 : %d | +200 : %d | --215(0) : %d\n", ft_atoi("   -254.36"), ft_atoi("      +200[2500"), ft_atoi(" --215"));
-}*/

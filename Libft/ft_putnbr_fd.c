@@ -6,15 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:42:26 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 23:46:02 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:50:59 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-
-	str = ft_itoa(n);
-	write(fd, str, ft_strlen(str));
+	write(fd, &n, sizeof n);
 }

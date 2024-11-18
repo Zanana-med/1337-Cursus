@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:04:56 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 22:19:01 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:24:23 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -15,6 +15,7 @@
 # include <limits.h> // LLONG_MAX
 # include <stddef.h> // size_t ...
 # include <stdlib.h> // malloc ...
+# include <unistd.h> // syscalls
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -46,4 +47,5 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		ft_putchar_fd(char c, int fd);
 #endif

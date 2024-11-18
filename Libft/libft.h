@@ -12,9 +12,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <limits.h> // for the LLONG_MAX && LLONG_MIN
-# include <stddef.h> // for the size_t type  // for th main and test (printf ...)
-# include <stdlib.h> // malloc ... // for the mem's original tests ...
+# include <limits.h> // LLONG_MAX
+# include <stddef.h> // size_t ...
+# include <stdlib.h> // malloc ...
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

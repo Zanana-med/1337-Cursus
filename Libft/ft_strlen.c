@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 08:01:24 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/15 19:58:35 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 16:20:23 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,5 +20,3 @@ size_t	ft_strlen(const char *s)
 		ret++;
 	return (ret);
 }
-
-

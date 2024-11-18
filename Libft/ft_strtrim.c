@@ -44,7 +44,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	index;
 
 	if (!set && s1)
-		return (ret = strdup(s1));
+		return (ret = ft_strdup(s1));
 	if ((!s1 && !set) || ft_checker(s1, set))
 		return (ft_strdup(""));
 	index = 0;

@@ -4,7 +4,7 @@
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                +#+#+#+#+#+   +#+           * 
 /*   Created: 2024/11/10 12:40:13 by mzanana           #+#    #+#             */
 /*   Updated: 2024/11/17 18:28:11 by mzanana          ###   ########.fr       */
 /*                                                                            */
@@ -13,10 +13,8 @@
 # define LIBFT_H
 
 # include <limits.h> // for the LLONG_MAX && LLONG_MIN
-# include <stddef.h> // for the size_t type
-# include <stdio.h>  // for th main and test (printf ...)
-# include <stdlib.h> // malloc ...
-# include <string.h> // for the mem's original tests ...
+# include <stddef.h> // for the size_t type  // for th main and test (printf ...)
+# include <stdlib.h> // malloc ... // for the mem's original tests ...
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

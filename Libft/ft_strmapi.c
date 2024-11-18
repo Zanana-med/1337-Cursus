@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:22:16 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 21:39:53 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 21:44:36 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if(s && !f)
 		return (ft_strdup(s));
 	index = ft_strlen(s);
-	ret = malloc (index * sizeof(char));
+	ret = malloc ((index + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
 	index = -1;

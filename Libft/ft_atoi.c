@@ -6,24 +6,32 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:00:00 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/17 09:35:17 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 11:58:40 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 #include <limits.h>
 
+static void	space_check(const char *s, int *index)
+{
+	while (s[*index] && ((s[*index] >= 9 && s[*index] <= 13)
+                        || s[*index] == 32))
+		*index++;
+}
+
 int	ft_atoi(const char *str)
 {
-	int	sign;
+	int		sign;
 	size_t	res;
-	int	index;
-	
-	
+	int		index;
+
 	index = 0;
 	sign = 1;
 	res = 0;
-	while (str[index] && ((str[index] >= 9 && str[index] <= 13) || str[index] == 32))
-		index++;
+	//while (str[index] && ((str[index] >= 9 && str[index] <= 13)
+	//		|| str[index] == 32))
+	//	index++;
+	space_check(str, index);
 	if (str[index] == '+' || str[index] == '-')
 	{
 		if (str[index] == '-')

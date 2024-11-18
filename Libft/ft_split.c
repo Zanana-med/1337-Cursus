@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:28:38 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 00:48:23 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 11:50:58 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,14 +14,19 @@
 static size_t	w_cnt(char const *str, char ch);
 static size_t	ft_lenght(const char *str, char ch, size_t start);
 static char		*ft_fill(char *dst, char const *src, size_t len, size_t *from);
-static void     ft_free(char **ret, size_t place);
+static void		ft_free(char **ret, size_t place);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
+	size_t	j;
+	size_t	i;
+	size_t	k;
 
-	size_t	(i), (j), (k);
-	if (!s || !(ret = malloc(sizeof(char *) * (w_cnt(s, c) + 1))))
+	if (!s)
+		return (NULL);
+	ret = malloc(sizeof(char *) * (w_cnt(s, c) + 1));
+	if (!ret)
 		return (NULL);
 	i = 0;
 	while (s[i] && s[i] == c)
@@ -31,7 +36,7 @@ char	**ft_split(char const *s, char c)
 	{
 		j = ft_lenght(s, c, i);
 		ret[k] = ft_fill(ret[k], s, j, &i);
-		if(!ret[k])
+		if (!ret[k])
 			return (ft_free(ret, k), NULL);
 		while (s[i] && s[i] == c)
 			i++;
@@ -47,13 +52,12 @@ static void	ft_free(char **ret, size_t place)
 	free(ret);
 }
 
-
 static size_t	w_cnt(char const *str, char ch)
 {
 	size_t	cnt;
 	size_t	i;
 	size_t	flag;
-	
+
 	cnt = 0;
 	i = 0;
 	while (str[i] && str[i] == ch)

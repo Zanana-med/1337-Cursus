@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:00:00 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/18 12:03:15 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/18 12:03:43 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,7 +16,7 @@ static void	space_check(const char *s, int *index)
 {
 	while (s[*index] && ((s[*index] >= 9 && s[*index] <= 13)
                         || s[*index] == 32))
-		*index++;
+		*index += 1;
 }
 
 int	ft_atoi(const char *str)

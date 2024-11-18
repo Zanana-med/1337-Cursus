@@ -19,10 +19,8 @@ static void     ft_free(char **ret, size_t place);
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	size_t	i;
-	size_t	k;
-	size_t	j;
 
+	size_t	(i), (j), (k);
 	if (!s || !(ret = malloc(sizeof(char *) * (w_cnt(s, c) + 1))))
 		return (NULL);
 	i = 0;
@@ -34,16 +32,12 @@ char	**ft_split(char const *s, char c)
 		j = ft_lenght(s, c, i);
 		ret[k] = ft_fill(ret[k], s, j, &i);
 		if(!ret[k])
-		{
-			ft_free(ret, k);
-			return (NULL);
-		}
+			return (ft_free(ret, k), NULL);
 		while (s[i] && s[i] == c)
 			i++;
 		k++;
 	}
-	ret[k] = 0;
-	return (ret);
+	return ((ret[k] = 0), ret);
 }
 
 static void	ft_free(char **ret, size_t place)
@@ -52,21 +46,7 @@ static void	ft_free(char **ret, size_t place)
 		free(ret[place]);
 	free(ret);
 }
-/*
-int	main(void)
-{
-	char	**tab;
-	size_t	cnt;
-	size_t	i;
-	size_t	flag;
 
-	tab = ft_split("", 'z');
-	if (!(tab))
-		printf("NULL");
-	else
-		if (!tab[0])
-			printf("ok\n");
-}*/
 
 static size_t	w_cnt(char const *str, char ch)
 {

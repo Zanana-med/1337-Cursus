@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:04:56 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/19 02:40:57 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/21 17:40:12 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -57,4 +57,5 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+t_list  *ft_lstnew(void *content);
 #endif

@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:04:56 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/21 21:17:48 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/21 23:59:21 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -60,5 +60,5 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
-
+t_list				*ft_lstlast(t_list *lst);
 #endif

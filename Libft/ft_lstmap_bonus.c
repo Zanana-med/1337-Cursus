@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 02:24:23 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/22 02:44:57 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/22 02:49:39 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,5 +30,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&ret, node);
 		lst = lst -> next;
 	}
-	return (new);
+	return (ret);
 }

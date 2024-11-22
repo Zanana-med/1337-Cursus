@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:41:27 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/22 01:50:39 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/22 01:54:30 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,8 +18,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
+
 	current = *lst;
-	while (current && current -> next)
+	while (current)
 	{
 		del (current -> content);
 		deleted = current;

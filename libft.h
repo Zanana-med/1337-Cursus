@@ -6,7 +6,7 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:04:56 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/22 02:47:28 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/26 01:39:34 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -16,6 +16,7 @@
 # include <stddef.h> // size_t ...
 # include <stdlib.h> // malloc ...
 # include <unistd.h> // syscalls
+# include <stdint.h> // size_max calloc
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -65,5 +66,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 #endif

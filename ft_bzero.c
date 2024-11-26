@@ -6,15 +6,12 @@
 /*   By: mzanana <mzanana@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:31:43 by mzanana           #+#    #+#             */
-/*   Updated: 2024/11/13 04:21:18 by mzanana          ###   ########.fr       */
+/*   Updated: 2024/11/26 01:22:28 by mzanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
-
-	str = (unsigned char *)s;
 	ft_memset(str, 0, n);
 }
